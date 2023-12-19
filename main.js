@@ -43,15 +43,10 @@ const actualizarDatos = async () => {
 
     console.log('Payload:', payload);
 
-    // Publicar el payload en la segunda API (attributes)
-    const responseAttributes = await axios.post('https://multiaire.smartaraucania.org/api/v1/Xk9AphxBraNrabpzEYY0/attributes', payload);
+    // Publicar el payload en la segunda API
+    const responseSecondAPI = await axios.post('https://multiaire.smartaraucania.org/api/v1/Xk9AphxBraNrabpzEYY0/telemetry', payload);
 
-    console.log('Datos actualizados correctamente en la segunda API (attributes):', responseAttributes.data);
-
-    // Publicar el payload en la segunda API (telemetry)
-    const responseTelemetry = await axios.post('https://multiaire.smartaraucania.org/api/v1/Xk9AphxBraNrabpzEYY0/telemetry', payload);
-
-    console.log('Datos actualizados correctamente en la segunda API (telemetry):', responseTelemetry.data);
+    console.log('Datos actualizados correctamente en la segunda API:', responseSecondAPI.data);
   } catch (error) {
     console.error('Error al actualizar datos:', error.message);
 
