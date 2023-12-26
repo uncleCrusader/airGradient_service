@@ -57,7 +57,7 @@ const actualizarDatos = async () => {
 };
 
 // Ejecutar la tarea cada 5 segundos
-setInterval(actualizarDatos, 5000);
+setInterval(actualizarDatos, 30000);
 
 // Iniciar el servidor
 app.listen(port, () => {
