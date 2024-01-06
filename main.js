@@ -44,7 +44,7 @@ const actualizarDatos = async () => {
     console.log('Payload:', payload);
 
     // Publicar el payload en la segunda API
-    const responseSecondAPI = await axios.post('https://multiaire.smartaraucania.org/api/v1/Xk9AphxBraNrabpzEYY0/telemetry', payload);
+    const responseSecondAPI = await axios.post('http://iot.ceisufro.cl:8080/api/v1/ma0hXeuwdnM9H65fswym/telemetry', payload);
 
     console.log('Datos actualizados correctamente en la segunda API:', responseSecondAPI.data);
   } catch (error) {
